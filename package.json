@@ -110,7 +110,7 @@
     "metascraper-publisher": "5.11.10",
     "metascraper-title": "5.11.10",
     "metascraper-url": "5.11.10",
-    "moment": "2.24.0",
+    "moment": "2.25.1",
     "moment-timezone": "0.5.23",
     "multer": "1.4.2",
     "mysql": "2.18.1",
