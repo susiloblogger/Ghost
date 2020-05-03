@@ -74,28 +74,31 @@
         "permalinks": {
             "defaultValue": "/:slug/",
             "validations": {
-                "matches": "^(\/:?[a-z0-9_-]+){1,5}\/$",
+                "matches": "^(/:?[a-z0-9_-]+){1,5}/$",
                 "matches": "(:id|:slug|:year|:month|:day|:author|:primary_tag|:primary_author)",
                 "notContains": "/ghost/"
             }
         },
         "amp": {
-            "defaultValue" : "true",
+            "defaultValue": "true",
             "validations": {
                 "isIn": [["true", "false"]]
             }
         },
         "ghost_head": {
-            "defaultValue" : ""
+            "defaultValue": ""
         },
         "ghost_foot": {
-            "defaultValue" : ""
+            "defaultValue": ""
         },
         "facebook": {
-            "defaultValue" : "ghost"
+            "defaultValue": "ghost"
+        },
+        "instagram": {
+            "defaultValue": "ghost"
         },
         "twitter": {
-            "defaultValue" : "tryghost"
+            "defaultValue": "tryghost"
         },
         "labs": {
             "defaultValue": "{}"
