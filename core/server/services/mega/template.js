@@ -851,7 +851,7 @@ figure blockquote p {
                                                 <tr>
                                                     <td class="site-icon"><a href="${site.url}"><img src="${site.iconUrl}" border="0"></a></td>
                                                 </tr>
-                                                ` : ``}
+                                                ` : ''}
                                                 <tr>
                                                     <td class="site-url"><div style="width: 100% !important;"><a href="${site.url}">${site.title}</a></div></td>
                                                 </tr>
@@ -878,7 +878,7 @@ figure blockquote p {
                                     <tr>
                                         <td class="feature-image"><img src="${post.feature_image}"></td>
                                     </tr>
-                                    ` : ``}
+                                    ` : ''}
                                     <tr>
                                         <td class="post-content">
                                             <!-- POST CONTENT START -->

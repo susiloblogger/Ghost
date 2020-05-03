@@ -47,7 +47,7 @@ describe('Settings Content API', function () {
                 });
                 publicProperties.push('codeinjection_head', 'codeinjection_foot');
                 settings.should.have.properties(publicProperties);
-                Object.keys(settings).length.should.equal(22);
+                Object.keys(settings).length.should.equal(23);
 
                 // Verify that we are returning the defaults for each value
                 _.forEach(settings, (value, key) => {

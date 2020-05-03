@@ -53,7 +53,7 @@ module.exports = function link(options) {
     let hrefString = `href="${href}"`;
     let attributeString = _.size(attributes) > 0 ? _formatAttrs(attributes) : '';
     let openingTag = `<a ${classString} ${hrefString} ${attributeString}>`;
-    let closingTag = `</a>`;
+    let closingTag = '</a>';
 
     // Clean up any extra spaces
     openingTag = openingTag.replace(/\s{2,}/g, ' ').replace(/\s>/, '>');

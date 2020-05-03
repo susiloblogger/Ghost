@@ -40,6 +40,7 @@ registerAllCoreHelpers = function registerAllCoreHelpers() {
     registerThemeHelper('title', coreHelpers.title);
     registerThemeHelper('twitter_url', coreHelpers.twitter_url);
     registerThemeHelper('facebook_url', coreHelpers.facebook_url);
+    registerThemeHelper('instagram_url', coreHelpers.instagram_url);
     registerThemeHelper('url', coreHelpers.url);
 
     // Async theme helpers

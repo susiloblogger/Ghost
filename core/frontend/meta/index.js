@@ -63,6 +63,7 @@ function getMetaData(data, root) {
             description: settingsCache.get('description'),
             url: urlUtils.urlFor('home', true),
             facebook: settingsCache.get('facebook'),
+            instagram: settingsCache.get('instagram'),
             twitter: settingsCache.get('twitter'),
             timezone: settingsCache.get('active_timezone'),
             navigation: settingsCache.get('navigation'),
@@ -88,24 +89,36 @@ function getMetaData(data, root) {
         // @TODO: https://github.com/TryGhost/Ghost/issues/10062
         customExcerpt = data.post.excerpt || data.post.custom_excerpt;
         metaDescription = data.post.meta_description;
-        fallbackExcerpt = data.post.html ? getExcerpt(data.post.html, {words: 50}) : '';
+        fallbackExcerpt = data.post.html
+            ? getExcerpt(data.post.html, {words: 50})
+            : '';
 
-        metaData.excerpt = customExcerpt ? customExcerpt : metaDescription ? metaDescription : fallbackExcerpt;
+        metaData.excerpt = customExcerpt
+            ? customExcerpt
+            : metaDescription
+                ? metaDescription
+                : fallbackExcerpt;
     }
 
-    if (data.post && data.post.primary_author && data.post.primary_author.name) {
+    if (
+        data.post &&
+        data.post.primary_author &&
+        data.post.primary_author.name
+    ) {
         metaData.authorName = data.post.primary_author.name;
     }
 
-    return Promise.props(getImageDimensions(metaData)).then(function () {
-        metaData.structuredData = getStructuredData(metaData);
-        metaData.schema = getSchema(metaData, data);
+    return Promise.props(getImageDimensions(metaData))
+        .then(function () {
+            metaData.structuredData = getStructuredData(metaData);
+            metaData.schema = getSchema(metaData, data);
 
-        return metaData;
-    }).catch(function (err) {
-        common.logging.error(err);
-        return metaData;
-    });
+            return metaData;
+        })
+        .catch(function (err) {
+            common.logging.error(err);
+            return metaData;
+        });
 }
 
 module.exports = getMetaData;

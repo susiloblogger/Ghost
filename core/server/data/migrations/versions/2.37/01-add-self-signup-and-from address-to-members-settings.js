@@ -42,10 +42,10 @@ module.exports.up = (options) => {
             
             if (hasRequirePaymentProperty) {
                 if (!hasSelfSignupProperty) {
-                    common.logging.info(`Adding allowSelfSignup property from requirePaymentForSignup in member settings`);
+                    common.logging.info('Adding allowSelfSignup property from requirePaymentForSignup in member settings');
                     subscriptionSettings.allowSelfSignup = !subscriptionSettings.requirePaymentForSignup;
                 }
-                common.logging.info(`Removing requirePaymentForSignup property in member settings`);
+                common.logging.info('Removing requirePaymentForSignup property in member settings');
                 delete subscriptionSettings.requirePaymentForSignup;
             }
 

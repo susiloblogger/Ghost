@@ -7,7 +7,7 @@ module.exports = {
             .select('value');
 
         if (!result || !result[0]) {
-            common.logging.warn(`Could not find labs setting`);
+            common.logging.warn('Could not find labs setting');
             result = [{}];
         }
 
